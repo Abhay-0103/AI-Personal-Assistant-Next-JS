@@ -33,26 +33,26 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export async function POST(request) {
-  try {
-    const { message } = await request.json();
+    try {
+        const { message } = await request.json();
 
-    // Load the Gemini model
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        // Load the Gemini model
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    // Send prompt to Gemini
-    const result = await model.generateContent(message);
+        // Send prompt to Gemini
+        const result = await model.generateContent(message);
 
-    // Extract plain text
-    const responseText = result.response.text();
+        // Extract plain text
+        const responseText = result.response.text();
 
-    return Response.json({
-      response: responseText
-    });
-  } catch (error) {
-    console.error("Gemini API Error:", error);
-    return Response.json(
-      { error: "Failed to process request" },
-      { status: 500 }
-    );
-  }
+        return Response.json({
+            response: responseText
+        });
+    } catch (error) {
+        console.error("Gemini API Error:", error);
+        return Response.json(
+            { error: "Failed to process request" },
+            { status: 500 }
+        );
+    }
 }
