@@ -73,7 +73,7 @@ export default function Home() {
         padding: "30px 20px",
         background: "linear-gradient(135deg, #1a1a2e, #16213e)",
         color: "#fff",
-        fontFamily: "Segoe UI, Arial, sans-serif",
+       
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -87,7 +87,7 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        🚀 Get Started With AI
+        🚀 Ask Me Anything....
       </h1>
 
       {/* Input Box */}
