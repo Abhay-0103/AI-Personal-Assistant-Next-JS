@@ -1,6 +1,6 @@
 # AI Application – Next.js
 
-This is an AI-powered web application built with **Next.js** that integrates the **Google Gemini API** to provide real-time AI-generated responses.  
+This is an AI-powered web application built with **Next.js** that integrates the **Google Gemini API** to provide real-time AI-generated responses for your question.  
 It’s lightweight, responsive, and ready for deployment on **Vercel**.
 
 ---
