@@ -37,7 +37,7 @@ export async function POST(request) {
         const { message } = await request.json();
 
         // Load the Gemini model
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
         // Send prompt to Gemini
         const result = await model.generateContent(message);
